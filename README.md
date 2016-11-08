@@ -7,6 +7,13 @@ This is a simple workshop for using [Rancher][].
 * [Docker Machine][]
 * [VirtualBox][] - optional, if you want play locally.
 
+Make sure you have the command in follow:
+
+```
+$ docker-machine --version
+docker-machine version 0.8.1, build 41b3b25
+```
+
 ## Workshop!
 
 A workflow for play Rancher.
