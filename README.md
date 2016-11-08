@@ -23,20 +23,20 @@ A workflow for play Rancher.
 First, you may create some machine for install Rancher Server & Host:
 
 ```
-docker-machine create -d virtualbox rancher-server
-docker-machine create -d virtualbox rancher-host-1
-docker-machine create -d virtualbox rancher-host-2
+$ docker-machine create -d virtualbox rancher-server
+$ docker-machine create -d virtualbox rancher-host-1
+$ docker-machine create -d virtualbox rancher-host-2
 ```
 
 SSH into `rancher-server` and run Rancher Server:
 
 ```
 # Check IP
-docker-machine ip rancher-server
+$ docker-machine ip rancher-server
 
 # SSH and run server
-docker-machine ssh rancher-server
-sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
+$ docker-machine ssh rancher-server
+$ sudo docker run -d --restart=unless-stopped -p 8080:8080 rancher/server
 
 # See http://<SERVER_IP>:8080/ and copy the command in custom host page
 ```
@@ -45,12 +45,12 @@ SSH into hosts and run Rancher Agent:
 
 ```
 # Check IP, it's will use at next step
-docker-machine ip rancher-host-1
-docker-machine ip rancher-host-2
+$ docker-machine ip rancher-host-1
+$ docker-machine ip rancher-host-2
 
 # SSH and run agent command such as: sudo docker run -d ...
-docker-machine ssh rancher-host-1
-docker-machine ssh rancher-host-2
+$ docker-machine ssh rancher-host-1
+$ docker-machine ssh rancher-host-2
 ```
 
 And now, you can see host in Rancher Page.
@@ -59,7 +59,7 @@ And now, you can see host in Rancher Page.
 
 Here is a `docker-compose.yml` example for build wordpress:
 
-```
+```yml
 wordpress:
   image: wordpress:4.6
   environment:
