@@ -62,6 +62,8 @@ Here is a `docker-compose.yml` example for build wordpress:
 ```yml
 wordpress:
   image: wordpress:4.6
+  links:
+    - mysql
   environment:
     WORDPRESS_DB_PASSWORD: example
 
