@@ -83,6 +83,10 @@ Here is some examples to manage your service:
 4. Create new stack from legacy stack
 
 
+## References
+
+* [Rancher Ngork](https://github.com/jmcarbo/rancher-ngrok) , thx 默司 support.
+
 [Docker Machine]: https://docs.docker.com/machine/
 [Rancher]: http://rancher.com/
 [VirtualBox]: https://www.virtualbox.org/
